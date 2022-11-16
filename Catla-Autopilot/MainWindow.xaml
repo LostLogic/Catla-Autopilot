@@ -1,0 +1,25 @@
+﻿<Window x:Class="Catla_Autopilot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Catla_Autopilot"
+        xmlns:viewModels="clr-namespace:Catla_Autopilot.ViewModels"
+        xmlns:views="clr-namespace:Catla_Autopilot.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <ContentControl Content="{Binding CurrentViewModel}">
+        <ContentControl.Resources>
+            <DataTemplate DataType="{x:Type viewModels:GatherViewModel}">
+                <views:GatherView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:ConfigViewModel}">
+                <views:ConfigView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:AboutViewModel}">
+                <views:AboutView />
+            </DataTemplate>
+        </ContentControl.Resources>
+    </ContentControl>
+
+</Window>
