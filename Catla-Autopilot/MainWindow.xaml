@@ -7,7 +7,7 @@
         xmlns:viewModels="clr-namespace:Catla_Autopilot.ViewModels"
         xmlns:views="clr-namespace:Catla_Autopilot.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Catla - Autopilot" Height="450" Width="800">
     <ContentControl Content="{Binding CurrentViewModel}">
         <ContentControl.Resources>
             <DataTemplate DataType="{x:Type viewModels:GatherViewModel}">
